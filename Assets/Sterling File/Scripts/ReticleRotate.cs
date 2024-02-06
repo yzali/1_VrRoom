@@ -13,7 +13,13 @@ public class ReticleRotate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("rotate info x: " +transform.rotation.x);
+        transform.Rotate(0, 0, 360 * Time.deltaTime);
+        string objName = transform.gameObject.name;
+        // Vector3 eAngles = transform.localEulerAngles;
+        // eAngles.y += 360 * Time.deltaTime;
+        Debug.Log("rotate info z:  " +transform.localEulerAngles.z + " obj name is : " + objName);
+
+        // transform.localEulerAngles = eAngles;
         // transform.Rotate(10*Time.deltaTime,0,0);
     }
 }
