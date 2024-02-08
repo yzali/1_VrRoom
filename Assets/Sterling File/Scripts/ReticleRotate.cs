@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class ReticleRotate : MonoBehaviour
 {
     // Start is called before the first frame update
+    float tmp = 0;
     void Start()
     {
         
@@ -13,13 +15,8 @@ public class ReticleRotate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0, 0, 360 * Time.deltaTime);
-        string objName = transform.gameObject.name;
-        // Vector3 eAngles = transform.localEulerAngles;
-        // eAngles.y += 360 * Time.deltaTime;
-        Debug.Log("rotate info z:  " +transform.localEulerAngles.z + " obj name is : " + objName);
-
-        // transform.localEulerAngles = eAngles;
-        // transform.Rotate(10*Time.deltaTime,0,0);
+        // Vector3 v3 = new Vector3(0,1,0);
+        // transform.Rotate(v3);
+        transform.Rotate(0, 1, 0,Space.Self);
     }
 }
