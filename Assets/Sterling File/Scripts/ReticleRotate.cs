@@ -19,7 +19,5 @@ public class ReticleRotate : MonoBehaviour
         // transform.Rotate(v3);
         transform.Rotate(0, 1, 0,Space.Self);
 
-        // 
-        float a =20 ;
     }
 }
